@@ -1,0 +1,184 @@
+* { font-family: sans-serif; }
+
+h1 {
+  color: #FFF;
+  background-color: #000;
+  width: fit-content;
+  margin: 20px auto 40px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #009879;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 8px;
+  background-color: #FFF;
+  bottom: -8px;
+  left: -10px;
+  animation: anim linear infinite 6s;
+}
+
+@keyframes anim {
+  from {left: -6px}
+  to   {left: 100%}
+}
+
+
+button.test {
+  width: 122px;
+  align-items: center;
+  background-image: radial-gradient(100% 100% at 100% 0, #64d3f2 0, #009879 100%);
+  border-radius: 6px;
+  box-shadow: #2d234266 0 2px 4px, rgb(45 35 66) 0 7px 13px -3px, rgb(58 65 111) 0 -3px 0 inset;
+  color: #FFF;
+  cursor: pointer;
+  height: 48px;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+}
+
+
+button.test:active {
+  transform: translateY(2px);
+}
+button.test:hover {
+  width: 150px;
+}
+
+
+.spec {
+  top: -47.5px;
+}
+
+.change-contact {
+  background-color: #EEE;
+  padding: 0 40px 30px 40px;
+  width: fit-content;
+  margin-left: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: -30px auto auto auto;
+  border: 5px solid #009879;
+}
+
+
+.change-contact #contact {
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #FFF;
+  color: #009879;
+  border: 3px solid #009879;
+}
+.change-contact #name {
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #FFF;
+  color: #009879;
+  border: 3px solid #009879;
+}
+.change-contact #Desctiption {
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #FFF;
+  color: #009879;
+  border: 3px solid #009879;
+}
+.change-contact #UpTime {
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #FFF;
+  color: #009879;
+  border: 3px solid #009879;
+}
+.change-contact #ObjectID {
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #FFF;
+  color: #009879;
+  border: 3px solid #009879;
+}
+.change-contact #Location {
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #FFF;
+  color: #009879;
+  border: 3px solid #009879;
+}
+.change-contact #Services {
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: #FFF;
+  color: #009879;
+  border: 3px solid #009879;
+}
+
+
+
+.change-contact button {
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #FFF;
+  color: #009879;
+  border: 3px solid #009879;
+}
+
+.change-contact button:active {
+  transform: translateY(1px);
+}
+
+
+.change-contact button:hover {
+  background-color: #009879;
+  color: #FFF;
+  border: 3px solid #FFF;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 50px auto;
+  width: fit-content;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+td {
+  padding: 12px 15px;
+}
+
+tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+tr:first-of-type {
+  border-top: 2px solid #009879;
+}
+
+tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+tr:hover {
+  background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}

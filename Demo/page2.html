@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page 2</title>
+  <link href="./style.css" rel="stylesheet"/>
+</head>
+
+<script>
+  function getInfo() {
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (this.status === 200) document.getElementById("container").innerHTML = this.responseText;
+    }
+    xhr.open("GET", `server.php?value=showInterfacesGroup`, true);
+    xhr.send();
+  }
+</script>
+
+<body onload="getInfo()">
+  <h1>Interfaces Group</h1>
+  <div id="container"></div>
+</body>
+</html>

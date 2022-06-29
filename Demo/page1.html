@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page 1</title>
+  <link href="./style.css" rel="stylesheet"/>
+</head>
+
+<script>
+  function getInfo(value,type) {
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (this.status === 200) document.getElementById("container").innerHTML = this.responseText;
+    }
+    xhr.open("GET", `server.php?value=${value}&name=${type}`, true);
+    xhr.send();
+  }
+
+  function changeContact(Value)
+  {
+    getInfo(document.getElementById(Value).value, Value);
+    location.reload(true);
+  }
+</script>
+
+<body onload="getInfo('showSystemGroup')">
+  <h1>System Group</h1>
+  
+  <section class="change-contact">
+    <h2>Change Information</h2>
+    <input type="text" id="name" placeholder="Type New Name">
+    <button onclick='changeContact("name")'>Change Name</button>
+    <br>
+    <input type="text" id="contact" placeholder="Type New Contact ">
+    <button onclick='changeContact("contact")'>Change Contact</button>
+    <br>
+    <input type="text" id="Location" placeholder="Type New Location">
+    <button onclick="changeContact('Location')">Change Location</button>
+  </section>
+  
+  <div id="container"></div>
+</body>
+</html>

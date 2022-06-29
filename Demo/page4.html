@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 4</title>
+    <link href="./style.css" rel="stylesheet"/>
+</head>
+
+<script>
+    function getInfo(type) {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.status === 200) document.getElementById("container").innerHTML = this.responseText;
+        }
+        xhr.open("GET", `server.php?value=showSNMPGroup`, true);
+        xhr.send();
+    }
+    function changeContact() {
+        getInfo(document.getElementById("contact").value);
+        location.reload(true);
+    }
+
+</script>
+
+<body onload="getInfo('showSNMPGroup')">
+<h1>SNMP Group</h1>
+
+<div id="container"></div>
+</body>
+</html>
